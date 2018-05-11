@@ -1,8 +1,7 @@
 'use strict';
 
-var express  = require('express'),
-
-app = express(),
+const express  = require('express'),
+const app = express(),
     
 function respond(req, res) {
     res.send('We are happy to see you using Chat Bot Webhook');
@@ -10,6 +9,9 @@ function respond(req, res) {
     
 app.get('/', respond);
 
-app.listen((process.env.PORT || 8000), function () {
-   console.log("Server is up and listening on port");
- 
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+  console.log('Express server listening on port', port)
+});
+
