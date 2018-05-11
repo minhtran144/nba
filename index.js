@@ -4,7 +4,7 @@ var express  = require('express'),
 
 app = express(),
     
-app.get('/',function(req,res){
+app.get(function(req,res) {
     res.send('We are happy to see you using Chat Bot Webhook');
   });
 
